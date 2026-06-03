@@ -1,100 +1,40 @@
-# Skin Disease Detector
+# SkinAI - Skin Disease Prediction System
 
-AI-powered skin disease detection using Flask (backend) + React (frontend).
+## Overview
+SkinAI is an AI-powered web application that predicts skin diseases from uploaded images using Deep Learning and Computer Vision.
 
----
+## Features
+- Skin disease prediction
+- Confidence score
+- Disease information
+- Risk assessment
+- User-friendly web interface
 
-## Folder Structure
+## Technologies Used
+- ReactJS
+- Flask
+- TensorFlow
+- MobileNetV2
+- OpenCV
+- SQLite
 
-```
-skin-disease-detector/
-│
-├── backend/
-│   ├── app.py                  ← Flask API
-│   ├── requirements.txt        ← Python dependencies
-│   ├── skin_model.h5           ← (your model file — copy here)
-│   └── label_encoder.pkl       ← (your encoder file — copy here)
-│
-└── frontend/
-    ├── package.json
-    ├── public/
-    │   └── index.html
-    └── src/
-        ├── index.js
-        ├── App.js
-        ├── App.css
-        ├── components/
-        │   ├── Uploader.js
-        │   └── Result.js
-        └── services/
-            └── api.js
-```
+## Dataset
+HAM10000 Dataset
 
----
+## Workflow
+Image Upload → Image Processing → MobileNetV2 Model → Disease Prediction → Results Display
 
-## Step 1 — Copy Model Files
+## Diseases Detected
+- Melanoma
+- Basal Cell Carcinoma
+- Actinic Keratosis
+- Benign Keratosis
+- Melanocytic Nevus
+- Dermatofibroma
+- Vascular Lesion
 
-Copy your model and encoder into the `backend/` folder:
-
-```
-backend/skin_model.h5
-backend/label_encoder.pkl
-```
-
----
-
-## Step 2 — Run Backend (Flask)
-
-Open **Terminal 1**:
-
-```bash
-cd skin-disease-detector/backend
-
-# Create virtual environment
-python -m venv venv
-
-# Activate it
-source venv/bin/activate        # Mac/Linux
-venv\Scripts\activate           # Windows
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Start Flask server
-python app.py
-```
-
-Flask runs at: http://127.0.0.1:5000
-
----
-
-## Step 3 — Run Frontend (React)
-
-Open **Terminal 2**:
-
-```bash
-cd skin-disease-detector/frontend
-
-npm install
-
-npm start
-```
-
-React runs at: http://localhost:3000
-
----
-
-## Usage
-
-1. Open http://localhost:3000 in browser
-2. Upload a skin image (drag & drop or click)
-3. Click "Analyze Image"
-4. See disease prediction, confidence %, and cause
-
----
-
-## Notes
-
-- Both terminals must be running at the same time
-- Flask must be on port 5000 (already set in api.js)
-- Model supports: melanoma, nv (mole), bcc (basal cell carcinoma)
+## Future Enhancements
+- Mobile Application
+- Cloud Deployment
+- Real-time Camera Detection
+- Dermatologist Consultation Support
